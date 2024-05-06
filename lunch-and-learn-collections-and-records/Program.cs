@@ -1,6 +1,7 @@
 ﻿using BenchmarkDotNet.Running;
 using lunch_and_learn_collections_and_records.Benchmarks;
 using lunch_and_learn_collections_and_records.Examples;
+using Microsoft.VisualBasic;
 
 var continueExecution = true;
 
@@ -15,6 +16,7 @@ while (continueExecution)
     Console.WriteLine("6. Yield Return vs List.Add Benchmark");
     Console.WriteLine("7. String Collection Benchmark");
     Console.WriteLine("8. Records/Record Structs List Benchmark");
+    Console.WriteLine("9. Collection access Benchmark");
     Console.WriteLine("");
     Console.Write("Select an example to run: ");
 
@@ -49,6 +51,9 @@ while (continueExecution)
             break;
         case ConsoleKey.D8:
             RunYieldReturnRecordsBenchmark();
+            break;
+        case ConsoleKey.D9:
+            RunCollectionAccessBenchmark();
             break;
     }
 
@@ -141,3 +146,5 @@ void RunRecordsVsClassesBenchmark() => BenchmarkRunner.Run<RecordsVsClassesVsStr
 void RunYieldReturnBenchmark() => BenchmarkRunner.Run<YieldReturnVsAdd>();
 
 void RunYieldReturnRecordsBenchmark() => BenchmarkRunner.Run<YieldReturnVsAddRecords>();
+
+void RunCollectionAccessBenchmark() => BenchmarkRunner.Run<CollectionAccess>();
