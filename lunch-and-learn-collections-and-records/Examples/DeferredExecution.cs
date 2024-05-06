@@ -36,14 +36,14 @@ public class DeferredExecution
             Console.WriteLine(name);
         }
 
-        Console.WriteLine();
-        Console.WriteLine();
-        Console.WriteLine();
+        WriteExampleDivider();
 
         foreach (var name in reverseOrder)
         {
             Console.WriteLine(name);
         }
+
+        WriteExampleDivider();
     }
 
     public async Task UseIAsyncEnumerable()

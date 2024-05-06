@@ -67,14 +67,17 @@ void RunEqualityExample()
 
     while (continueEqualityExample)
     {
-        Console.WriteLine("Select an example to run");
         Console.WriteLine("0. Return to example selection.");
         Console.WriteLine("1. Reference based equality");
         Console.WriteLine("2. Value Type Equality");
         Console.WriteLine("3. Record with List Equality");
         Console.WriteLine("4. Record with Nested Record Equality");
+        Console.WriteLine("Select an example to run");
+        Console.WriteLine();
 
         var entry = Console.ReadKey().Key;
+
+        Console.WriteLine();
 
         switch (entry)
         {
@@ -104,13 +107,16 @@ async Task RunDeferredExecutionExampleAsync()
 
     while (continueDeferredExecutionExample)
     {
-        Console.WriteLine("Select an example to run");
         Console.WriteLine("0. Return to example selection.");
         Console.WriteLine("1. IEnumerable");
         Console.WriteLine("2. List");
         Console.WriteLine("3. IAsyncEnumerable");
+        Console.WriteLine("Select an example to run");
+        Console.WriteLine();
 
         var entry = Console.ReadKey().Key;
+
+        Console.WriteLine();
 
         switch (entry)
         {
